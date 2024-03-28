@@ -12,6 +12,9 @@ from .serializers import BookingSerializer, UserSerializer, MenuSerializer
 from .models import Menu, Booking
 
 
+
+def index(request):
+    return render(request, 'index.html', {})
 class BookingViewSet (ModelViewSet):
     permission_classes = [IsAuthenticated]
     queryset = Booking.objects.all()
